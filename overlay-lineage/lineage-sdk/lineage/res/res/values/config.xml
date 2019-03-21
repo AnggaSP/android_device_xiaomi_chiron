@@ -23,7 +23,7 @@
         <item>default4-default:standard</item>
         <item>warm:reading</item>
         <item>cool:dynamic</item>
-        <item>37sRGB-N:srgb</item>
+        <item>03-sRGB:srgb</item>
     </string-array>
 
     <!-- Hardware keys present on the device, stored as a bit field.
