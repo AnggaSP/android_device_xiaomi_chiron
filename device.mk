@@ -39,5 +39,11 @@ PRODUCT_COPY_FILES += \
 # Properties
 include $(LOCAL_PATH)/vendor_prop.mk
 
+# VNDK
+EXTRA_VENDOR_LIBRARIES_64 := \
+    libaudioclient \
+    libaudiomanager \
+    libmediametrics
+
 # Call the proprietary setup
 $(call inherit-product, vendor/xiaomi/chiron/chiron-vendor.mk)
