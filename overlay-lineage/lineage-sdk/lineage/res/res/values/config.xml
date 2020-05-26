@@ -20,10 +20,10 @@
          app, they can be remapped here. The format is
          "oldname:newname", one per entry. -->
     <string-array name="config_displayModeMappings" translatable="false">
-        <item>default4-default:standard</item>
-        <item>warm:reading</item>
+        <item>default4-default:basic</item>
         <item>cool:dynamic</item>
-        <item>37sRGB-N:srgb</item>
+        <item>warm:reading</item>
+        <item>03-sRGB:srgb</item>
     </string-array>
 
     <!-- Hardware keys present on the device, stored as a bit field.
