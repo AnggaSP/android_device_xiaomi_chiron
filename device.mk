@@ -30,6 +30,47 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/audio/audio_policy_volumes.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_volumes.xml \
     $(LOCAL_PATH)/configs/audio/mixer_paths_tasha.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths_tasha.xml
 
+# GApps
+GAPPS_VARIANT := super
+GAPPS_FORCE_PACKAGE_OVERRIDES := true
+GAPPS_FORCE_BROWSER_OVERRIDES := true
+GAPPS_FORCE_DIALER_OVERRIDES := false
+GAPPS_FORCE_MMS_OVERRIDES := true
+GAPPS_FORCE_PIXEL_LAUNCHER := false
+GAPPS_FORCE_WEBVIEW_OVERRIDES := true
+GAPPS_EXCLUDED_PACKAGES += CalculatorGoogle
+GAPPS_EXCLUDED_PACKAGES += CloudPrint2
+GAPPS_EXCLUDED_PACKAGES += DMAgent
+GAPPS_EXCLUDED_PACKAGES += Drive
+GAPPS_EXCLUDED_PACKAGES += EditorsDocs
+GAPPS_EXCLUDED_PACKAGES += EditorsSheets
+GAPPS_EXCLUDED_PACKAGES += EditorsSlides
+GAPPS_EXCLUDED_PACKAGES += FitnessPrebuilt
+GAPPS_EXCLUDED_PACKAGES += GoogleCamera
+GAPPS_EXCLUDED_PACKAGES += GoogleContacts
+GAPPS_EXCLUDED_PACKAGES += GoogleEarth
+GAPPS_EXCLUDED_PACKAGES += GoogleHindiIME
+GAPPS_EXCLUDED_PACKAGES += GoogleJapaneseInput
+GAPPS_EXCLUDED_PACKAGES += GooglePackageInstaller
+GAPPS_EXCLUDED_PACKAGES += GooglePinyinIME
+GAPPS_EXCLUDED_PACKAGES += GooglePrintRecommendationService
+GAPPS_EXCLUDED_PACKAGES += GoogleVrCore
+GAPPS_EXCLUDED_PACKAGES += GoogleZhuyinIME
+GAPPS_EXCLUDED_PACKAGES += Hangouts
+GAPPS_EXCLUDED_PACKAGES += KoreanIME
+GAPPS_EXCLUDED_PACKAGES += Music2
+GAPPS_EXCLUDED_PACKAGES += Newsstand
+GAPPS_EXCLUDED_PACKAGES += PlayGames
+GAPPS_EXCLUDED_PACKAGES += PrebuiltDeskClockGoogle
+GAPPS_EXCLUDED_PACKAGES += Street
+GAPPS_EXCLUDED_PACKAGES += StorageManagerGoogle
+GAPPS_EXCLUDED_PACKAGES += TagGoogle
+GAPPS_EXCLUDED_PACKAGES += TranslatePrebuilt
+GAPPS_EXCLUDED_PACKAGES += Turbo
+GAPPS_EXCLUDED_PACKAGES += Tycho
+GAPPS_EXCLUDED_PACKAGES += Videos
+GAPPS_EXCLUDED_PACKAGES += Wallet
+
 # Input
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/keylayout/synaptics_dsx.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/synaptics_dsx.kl \
@@ -41,3 +82,6 @@ include $(LOCAL_PATH)/vendor_prop.mk
 
 # Call the proprietary setup
 $(call inherit-product, vendor/xiaomi/chiron/chiron-vendor.mk)
+
+# Call the gapps provider
+$(call inherit-product, vendor/opengapps/build/opengapps-packages.mk)
